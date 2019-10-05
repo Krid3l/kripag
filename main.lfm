@@ -1,0 +1,200 @@
+object TFormMain: TTFormMain
+  Left = 804
+  Height = 240
+  Top = 449
+  Width = 320
+  Caption = 'Kridel''s Password Generator'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.0.2.0'
+  object ButtonGen: TButton
+    Left = 123
+    Height = 25
+    Top = 168
+    Width = 80
+    Caption = 'Generate'
+    OnClick = ButtonGenClick
+    TabOrder = 0
+  end
+  object EditPwdField: TEdit
+    Left = 24
+    Height = 23
+    Top = 200
+    Width = 272
+    Alignment = taCenter
+    OnChange = EditPwdFieldChange
+    TabOrder = 1
+  end
+  object CheckBoxLch: TCheckBox
+    Left = 24
+    Height = 19
+    Top = 32
+    Width = 110
+    Caption = 'Lowercase letters'
+    Checked = True
+    Enabled = False
+    State = cbChecked
+    TabOrder = 2
+  end
+  object CheckBoxUch: TCheckBox
+    Left = 24
+    Height = 19
+    Top = 56
+    Width = 110
+    Caption = 'Uppercase letters'
+    Checked = True
+    State = cbChecked
+    TabOrder = 3
+  end
+  object CheckBoxNum: TCheckBox
+    Left = 24
+    Height = 19
+    Top = 80
+    Width = 69
+    Caption = 'Numbers'
+    Checked = True
+    State = cbChecked
+    TabOrder = 4
+  end
+  object LabelAllow: TLabel
+    Left = 64
+    Height = 15
+    Top = 8
+    Width = 30
+    Caption = 'Allow'
+    ParentColor = False
+    OnClick = LabelAllowClick
+  end
+  object CheckBoxOth: TCheckBox
+    Left = 24
+    Height = 19
+    Top = 128
+    Width = 123
+    Caption = 'Others: ! # % $ && @'
+    Checked = True
+    OnChange = CheckBoxOthChange
+    State = cbChecked
+    TabOrder = 5
+  end
+  object EditRangeFrom: TEdit
+    Left = 208
+    Height = 23
+    Top = 56
+    Width = 32
+    OnChange = EditRangeFromChange
+    TabOrder = 6
+    Text = '8'
+  end
+  object EditCharsLong: TEdit
+    Left = 208
+    Height = 23
+    Top = 124
+    Width = 80
+    OnChange = EditCharsLongChange
+    TabOrder = 7
+  end
+  object EditRangeTo: TEdit
+    Left = 256
+    Height = 23
+    Top = 56
+    Width = 32
+    OnChange = EditRangeToChange
+    TabOrder = 8
+    Text = '16'
+  end
+  object LabelHyphen: TLabel
+    Left = 246
+    Height = 15
+    Top = 60
+    Width = 5
+    Caption = '-'
+    ParentColor = False
+    OnClick = LabelHyphenClick
+  end
+  object LabelLength: TLabel
+    Left = 232
+    Height = 15
+    Top = 8
+    Width = 37
+    Caption = 'Length'
+    ParentColor = False
+    OnClick = LabelLengthClick
+  end
+  object CheckBoxHun: TCheckBox
+    Left = 24
+    Height = 19
+    Top = 104
+    Width = 157
+    Caption = 'Hyphens and underscores'
+    Checked = True
+    State = cbChecked
+    TabOrder = 9
+  end
+  object LabelErrMsg: TLabel
+    Left = 24
+    Height = 15
+    Top = 224
+    Width = 272
+    Alignment = taCenter
+    AutoSize = False
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 216
+    Height = 12
+    Top = 80
+    Width = 17
+    Caption = 'min.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -9
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = LabelMin
+  end
+  object LabelMax: TLabel
+    Left = 263
+    Height = 12
+    Top = 80
+    Width = 19
+    Caption = 'max.'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -9
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = LabelMaxClick
+  end
+  object RadioRange: TRadioButton
+    Left = 208
+    Height = 19
+    Top = 32
+    Width = 66
+    Caption = 'In range:'
+    Checked = True
+    OnChange = RadioRangeChange
+    TabOrder = 11
+    TabStop = True
+  end
+  object RadioFixed: TRadioButton
+    Left = 208
+    Height = 19
+    Top = 104
+    Width = 88
+    Caption = 'n chars long:'
+    TabOrder = 10
+  end
+end
